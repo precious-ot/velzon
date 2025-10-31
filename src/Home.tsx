@@ -17,6 +17,7 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
     const [openMenu, setOpenMenu] = useState<boolean>(false);
     const [closeMenu, setCloseMenu] = useState<boolean>(true);
     const [scrolled, setScrolled] = useState<boolean>(false);
+    const [link, setLink] = useState<boolean>(false)
 
     useEffect(() => {
       const handleScroll = () => {
@@ -28,13 +29,13 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
     }, []);
 
     const handleMenu = () => {
-        setOpenMenu(true);
+        setOpenMenu(!openMenu);
         setCloseMenu(false);
     }
 
     const handleClose = () => {
         setCloseMenu(true);
-        setOpenMenu(false);
+        setOpenMenu(false)
     }
 
     return(
@@ -62,11 +63,11 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
                </div>
               }
             <ul className="mt-8">
-                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={homeHref} className="cursor-pointer text-neutral-300 font-semibold f">Home</a></li>
-                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={walletHref} className="cursor-pointer text-neutral-300 font-semibold f">Wallet</a></li>
-                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={marketHref} className="cursor-pointer text-neutral-300 font-semibold f">Marketplace</a></li>
-                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={categoriesHref} className="cursor-pointer text-neutral-300 font-semibold f">Categories</a></li>
-                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={creatorHref} className="cursor-pointer text-neutral-300 font-semibold f">Creators</a></li>
+                <li onClick={handleClose} className="border-b-1 border-blue-700 py-4 ps-6"><a href={homeHref} className="cursor-pointer text-neutral-300 font-semibold f">Home</a></li>
+                <li onClick={handleClose} className="border-b-1 border-blue-700 py-4 ps-6"><a href={walletHref} className="cursor-pointer text-neutral-300 font-semibold f">Wallet</a></li>
+                <li onClick={handleClose} className="border-b-1 border-blue-700 py-4 ps-6"><a href={marketHref} className="cursor-pointer text-neutral-300 font-semibold f">Marketplace</a></li>
+                <li onClick={handleClose} className="border-b-1 border-blue-700 py-4 ps-6"><a href={categoriesHref} className="cursor-pointer text-neutral-300 font-semibold f">Categories</a></li>
+                <li onClick={handleClose} className="border-b-1 border-blue-700 py-4 ps-6"><a href={creatorHref} className="cursor-pointer text-neutral-300 font-semibold f">Creators</a></li>
             </ul>
             <div className="mt-8 ps-6">
             <button className="bg-blue-600 py-2 px-3 text-neutral-200 text-sm rounded-sm font-semibold">Wallet Connect</button>
