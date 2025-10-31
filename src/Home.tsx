@@ -53,7 +53,7 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
             </ul>
          </div>
          {openMenu &&
-           <div className="fixed text-start pt-6 right-0 top-0 w-sm h-full w-auto bg-blue-950">
+           <div className="fixed text-start pt-6 right-0 top-0 w-full sm:w-sm h-full w-auto bg-blue-950">
              {openMenu &&
               <div className="ps-5">
                <button onClick={handleClose}><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#ffffffbf" className="bi bi-x" viewBox="0 0 16 16">
@@ -62,13 +62,13 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
                </div>
               }
             <ul className="mt-8">
-                <li className="px-2 border-b-1 border-blue-700 py-4 ps-5"><a className="cursor-pointer text-neutral-300 font-semibold f">Home</a></li>
-                <li className="px-2 border-b-1 border-blue-700 py-4 ps-5"><a className="cursor-pointer text-neutral-300 font-semibold f">Wallet</a></li>
-                <li className="px-2 border-b-1 border-blue-700 py-4 ps-5"><a className="cursor-pointer text-neutral-300 font-semibold f">Marketplace</a></li>
-                <li className="px-2 border-b-1 border-blue-700 py-4 ps-5"><a className="cursor-pointer text-neutral-300 font-semibold f">Categories</a></li>
-                <li className="px-2 border-b-1 border-blue-700 py-4 ps-5"><a className="cursor-pointer text-neutral-300 font-semibold f">Creators</a></li>
+                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={homeHref} className="cursor-pointer text-neutral-300 font-semibold f">Home</a></li>
+                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={walletHref} className="cursor-pointer text-neutral-300 font-semibold f">Wallet</a></li>
+                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={marketHref} className="cursor-pointer text-neutral-300 font-semibold f">Marketplace</a></li>
+                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={categoriesHref} className="cursor-pointer text-neutral-300 font-semibold f">Categories</a></li>
+                <li className="border-b-1 border-blue-700 py-4 ps-6"><a href={creatorHref} className="cursor-pointer text-neutral-300 font-semibold f">Creators</a></li>
             </ul>
-            <div className="mt-8 ps-5">
+            <div className="mt-8 ps-6">
             <button className="bg-blue-600 py-2 px-3 text-neutral-200 text-sm rounded-sm font-semibold">Wallet Connect</button>
             </div>
          </div>
@@ -91,7 +91,7 @@ export function Navigation({homeHref, walletHref, marketHref, categoriesHref, cr
 export default function Home({id}: HomeProp) {
   return(
     <div id={id} className="relative">
-    <div className="pt-40 pb-30 grid justify-center place-items-center">
+    <div className="pt-40 px-8 pb-30 grid justify-center place-items-center">
         <h1 className="capitarize max-w-xl text-neutral-200 leading-15 font-semibold text-5xl">Discover Digital Art & Collect <span>NFT Marketplace</span></h1>
         <p className="text-neutral-400 font-semibold text-lg max-w-2xl text-center mt-8">Can artwork be NFT? NFTs (non-fungible tokens) are one-of-a-kind digital assets. Given they're digital in nature, can physical works of art be turned into NFTs?.</p>
         <div className="flex justify-center gap-5 mt-8">

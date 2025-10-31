@@ -30,11 +30,11 @@ export function WalletItem({title, description, button, image, className}: Marke
 export default function Wallet({id}: IdProp){
     return(
         <div id={id} className="grid bg-neutral-900 py-20 place-items-center">
-            <div className="px-15 text-neutral-300 text-center">
+            <div className="sm:px-15 px-8 text-neutral-300 text-center">
                 <h1 className="font-bold text-3xl">Connect NFT Marketplace</h1>
                 <p className="text-md text-neutral-500 max-w-2xl mt-7">A non-fungible token is a non-interchangeable unit of data stored on a blockchain, a form of digital ledger, that can be sold and traded.</p>
             </div>
-        <div className="grid md:grid-cols-2 md: lg:grid-cols-3 gap-5 px-15 py-20 text-neutral-200">
+        <div className="grid md:grid-cols-2 md: lg:grid-cols-3 gap-5 px-8 sm:px-15 py-20 text-neutral-200">
             <WalletItem 
             image={{src: metamask}} 
             title="Metamask" 

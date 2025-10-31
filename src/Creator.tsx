@@ -21,7 +21,7 @@ type IdProp = {
 export function Assets({image, name, price}: CreatorProp) {
   const [dropdown, setDropdown] = useState<boolean>(false);
   return(
-    <div className="flex gap-2 bg-neutral-950 border-1 border-neutral-800 py-5 px-5 rounded-md">
+    <div className="flex w-full gap-2 bg-neutral-950 border-1 border-neutral-800 py-5 px-5 rounded-md">
       <div>
         <img className="w-12 h-12 rounded-sm" {...image}/>
       </div>
@@ -55,7 +55,7 @@ export default function Creator({id}: IdProp) {
           <h1 className="text-3xl font-semibold text-neutral-200 max-w-2xl">Top Creator This Week</h1>
           <p className="text-neutral-500 mt-8 max-w-3xl">NFTs are valuable because they verify the authenticity of a non-fungible asset. This makes these assets unique and one of a kind.</p>
         </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 justify-center mt-15">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 mt-15">
             <Assets image={{src: img1}} name="Timothy Smith" price={4_754}/>
             <Assets image={{src: avatar5}} name="Alexis Clarke" price={81_369}/>
             <Assets image={{src: img6}} name="Glen Matney" price={13_156}/>
